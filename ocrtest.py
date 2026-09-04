@@ -11,7 +11,7 @@ ocr = PaddleOCR(
 )
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-image_path = os.path.join(script_dir, "images", "1.jpeg")
+image_path = os.path.join(script_dir, "ocr_images", "1.jpeg")
 
 result = ocr.predict(image_path)
 
