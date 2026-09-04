@@ -1,0 +1,16 @@
+filename,compliant,missing_fields,avg_confidence
+1.jpeg,No,MRP (Price); Batch Number; Manufacturing/Packaging Date; Expiry / Use By Date,0.952
+2.jpeg,No,MRP (Price); Batch Number; Manufacturing/Packaging Date; Expiry / Use By Date; Net Weight / Quantity; Manufacturer Address; Ingredients List; Nutritional Information; Customer Care Contact,0.661
+3.jpeg,No,FSSAI License Number; Batch Number; Manufacturing/Packaging Date; Net Weight / Quantity; Manufacturer Address; Customer Care Contact,0.9378
+4.jpeg,No,MRP (Price); Batch Number; Manufacturing/Packaging Date; Expiry / Use By Date; Manufacturer Address; Customer Care Contact,0.8375
+5.jpeg,No,Batch Number; Manufacturing/Packaging Date; Expiry / Use By Date; Customer Care Contact,0.8696
+product (1).jpeg,N/A,No text extracted,0.0
+product (10).jpeg,No,FSSAI License Number; Manufacturing/Packaging Date; Customer Care Contact,0.8942
+product (100).jpeg,No,FSSAI License Number; MRP (Price); Batch Number; Manufacturing/Packaging Date; Expiry / Use By Date; Manufacturer Address; Ingredients List; Customer Care Contact,0.9672
+product (101).jpeg,No,MRP (Price); Manufacturing/Packaging Date; Ingredients List; Nutritional Information,0.9763
+product (102).jpeg,No,FSSAI License Number; MRP (Price); Batch Number; Manufacturing/Packaging Date; Expiry / Use By Date; Net Weight / Quantity; Ingredients List; Customer Care Contact,0.9796
+product (103).jpeg,No,MRP (Price); Batch Number; Manufacturing/Packaging Date; Expiry / Use By Date; Net Weight / Quantity; Ingredients List; Nutritional Information; Customer Care Contact,0.9632
+product (104).jpeg,No,Manufacturing/Packaging Date; Customer Care Contact,0.9413
+product (105).jpeg,No,FSSAI License Number; MRP (Price); Batch Number; Manufacturing/Packaging Date; Expiry / Use By Date; Net Weight / Quantity; Manufacturer Address; Ingredients List; Nutritional Information; Customer Care Contact,0.9834
+product (106).jpeg,No,Batch Number; Manufacturing/Packaging Date; Expiry / Use By Date; Nutritional Information; Customer Care Contact,0.9425
+product (107).jpeg,No,FSSAI License Number; MRP (Price); Batch Number; Manufacturing/Packaging Date; Expiry / Use By Date; Net Weight / Quantity; Manufacturer Address; Ingredients List; Nutritional Information; Customer Care Contact,0.9226

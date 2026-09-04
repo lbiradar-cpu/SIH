@@ -1,0 +1,69 @@
+{
+    "manufacturer": {
+        "value": "FERRERO INDIA PVT. LTD. RegD. Off. & FaCtOry: Plot No. F-13,",
+        "found": true,
+        "confidence": 0.9,
+        "evidence": "MFD. BY: FERRERO INDIA PVT. LTD. RegD. Off. & FaCtOry: Plot No. F-13,"
+    },
+    "manufacturer_address": {
+        "value": "MFD. BY: FERRERO INDIA PVT. LTD. RegD. Off. & FaCtOry: Plot No. F-13,",
+        "found": true,
+        "confidence": 0.8,
+        "evidence": "MFD. BY: FERRERO INDIA PVT. LTD. RegD. Off. & FaCtOry: Plot No. F-13,"
+    },
+    "net_quantity": {
+        "value": "456 g",
+        "found": true,
+        "confidence": 0.93,
+        "evidence": "NET WEIGHT:\n456 g"
+    },
+    "mrp": {
+        "value": null,
+        "currency": "INR",
+        "found": false,
+        "confidence": 0.0,
+        "evidence": null
+    },
+    "batch_number": {
+        "value": ".",
+        "found": true,
+        "confidence": 0.9,
+        "evidence": "lot No."
+    },
+    "fssai_license": {
+        "value": "10013022002",
+        "found": true,
+        "confidence": 0.9,
+        "evidence": "Lic. No. 10013022002"
+    },
+    "manufacturing_or_packing_date": {
+        "value": null,
+        "found": false,
+        "confidence": 0.0,
+        "evidence": null
+    },
+    "expiry_or_use_by_date": {
+        "value": null,
+        "found": false,
+        "confidence": 0.0,
+        "evidence": null
+    },
+    "ingredients": {
+        "value": "SUGAR, SKIMMED COW MILK POWDER",
+        "found": true,
+        "confidence": 0.9,
+        "evidence": "CateGOry: 2.4.1. INGREDIENTS: SUGAR, SKIMMED COW MILK POWDER"
+    },
+    "nutritional_information": {
+        "value": "NUTRITIONAL INFORMATION",
+        "found": true,
+        "confidence": 0.9,
+        "evidence": "NUTRITIONAL INFORMATION"
+    },
+    "consumer_care": {
+        "value": null,
+        "found": false,
+        "confidence": 0.0,
+        "evidence": null
+    }
+}

@@ -1,0 +1,6 @@
+filename,full_image_avg_confidence,full_image_detections,cropped_regions_avg_confidence,cropped_regions_detections,winner
+3.jpeg,0.8614,68,0.9378,78,cropped
+4.jpeg,0.8781,100,0.8375,113,full
+product (105).jpeg,0.7795,5,0.9834,5,cropped
+product (123).jpeg,0.7638,95,0.8656,67,cropped
+product (127).jpeg,0.917,11,0.9477,12,cropped

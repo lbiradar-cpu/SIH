@@ -1,6 +1,12 @@
 import os
 import json
 from paddleocr import PaddleOCR
+from label_extractor import LabelExtractor
+
+
+# -----------------------------
+# 1. Start PaddleOCR
+# -----------------------------
 
 ocr = PaddleOCR(
     lang="en",
@@ -10,32 +16,95 @@ ocr = PaddleOCR(
     enable_mkldnn=False,
 )
 
+
+# -----------------------------
+# 2. Find image
+# -----------------------------
+
 script_dir = os.path.dirname(os.path.abspath(__file__))
-image_path = os.path.join(script_dir, "ocr_images", "1.jpeg")
+
+image_path = os.path.join(
+    script_dir,
+    "ocr_images",
+    "1.jpeg"
+)
+
+
+# -----------------------------
+# 3. Run OCR
+# -----------------------------
 
 result = ocr.predict(image_path)
 
-structured_data = []
+
+# -----------------------------
+# 4. Get OCR text
+# -----------------------------
+
+ocr_lines = []
 
 for res in result:
     texts = res["rec_texts"]
-    scores = res["rec_scores"]
-    boxes = res["rec_polys"]  # list of 4-point polygons per detected text line
 
-    for text, score, box in zip(texts, scores, boxes):
-        structured_data.append({
-            "text": text,
-            "confidence": round(float(score), 4),
-            "box": [[float(x), float(y)] for x, y in box]
-        })
+    for text in texts:
+        ocr_lines.append(text)
 
-# Save structured output to JSON
-output_path = os.path.join(script_dir, "output.json")
-with open(output_path, "w", encoding="utf-8") as f:
-    json.dump(structured_data, f, indent=2, ensure_ascii=False)
 
-print(f"Extracted {len(structured_data)} text lines. Saved to {output_path}")
+# Convert OCR lines into one text block
+ocr_text = "\n".join(ocr_lines)
 
-# Also print a clean readable summary
-for item in structured_data:
-    print(f"[{item['confidence']:.2f}] {item['text']}")
+
+print("\n========== RAW OCR TEXT ==========\n")
+print(ocr_text)
+
+
+# -----------------------------
+# 5. Send OCR text to extractor
+# -----------------------------
+
+extractor = LabelExtractor(ocr_text)
+
+structured_data = extractor.extract_all()
+
+
+# -----------------------------
+# 6. Print structured data
+# -----------------------------
+
+print("\n========== STRUCTURED DATA ==========\n")
+
+print(
+    json.dumps(
+        structured_data,
+        indent=4,
+        ensure_ascii=False
+    )
+)
+
+
+# -----------------------------
+# 7. Save JSON
+# -----------------------------
+
+output_path = os.path.join(
+    script_dir,
+    "structured_output.json"
+)
+
+with open(
+    output_path,
+    "w",
+    encoding="utf-8"
+) as f:
+
+    json.dump(
+        structured_data,
+        f,
+        indent=4,
+        ensure_ascii=False
+    )
+
+
+print(
+    f"\nStructured data saved to: {output_path}"
+)
